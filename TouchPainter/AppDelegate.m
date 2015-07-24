@@ -17,6 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    CoordinatingController *coordinator = [CoordinatingController sharedInstance];
+    UIView *view = [[coordinator activeViewController] view];
+    [self.window addSubview:view];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
