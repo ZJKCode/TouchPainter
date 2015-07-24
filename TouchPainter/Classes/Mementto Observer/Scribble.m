@@ -125,9 +125,9 @@
     
     ScribbleMemento *memento = [[ScribbleMemento alloc] initWithMark:mementoMark];
     [memento setHasComleteSnapshot:hasCompleteSnapshot];
-    return mementoMark;
     
-
+    // 返回的是 ScribbleMemento备忘
+    return memento;
 }
 
 - (ScribbleMemento *)scribbleMemento

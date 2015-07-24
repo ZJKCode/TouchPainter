@@ -16,9 +16,13 @@
 
 - (NSData *)data
 {
+   
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:mark_];
     return data;
+    
 }
+
+
 
 + (ScribbleMemento *) mementoWithData:(NSData *)data
 {
