@@ -16,7 +16,7 @@
 
 - (NSData *)data
 {
-   
+   // 将mark 数据持久化为Data
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:mark_];
     return data;
     
@@ -28,7 +28,9 @@
 {
     //It raises an NSInvalidArchiveOperationException
     //if data is not a valid archive
-    id<Mark> retoredMark = (id<Mark>)[NSKeyedUnarchiver unarchiveObjectWithData:data];
+    // 将数据反序列化为mark
+    id <Mark> retoredMark = (id <Mark>)[NSKeyedUnarchiver unarchiveObjectWithData:data];
+
     ScribbleMemento *memento = [[ScribbleMemento alloc] initWithMark:retoredMark];
    
     return memento;

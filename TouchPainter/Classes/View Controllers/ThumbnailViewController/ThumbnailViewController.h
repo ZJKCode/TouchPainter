@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ScribbleThumbnailCell.h"
+#import "ScribbleManager.h"
+#import "CommondBarButton.h"
 
 @interface ThumbnailViewController : UIViewController
+<
+UITabBarControllerDelegate,
+UITableViewDataSource
+>
+{
+    @private
+    
+   
+    ScribbleManager *scrbbleManager_;
+    IBOutlet UINavigationItem *navItem_;
+    
+}
+
 
 @end

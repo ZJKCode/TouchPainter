@@ -21,7 +21,7 @@
 		7F17DDDA1B5E33B30023940A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F17DDD61B5E33B30023940A /* Main.storyboard */; };
 		7F17DDDB1B5E33B30023940A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F17DDD81B5E33B30023940A /* Images.xcassets */; };
 		7F17DDDE1B5E37110023940A /* CoordinatingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F17DDDD1B5E37110023940A /* CoordinatingController.m */; };
-		7F17DDE21B5E37860023940A /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F17DDE01B5E37860023940A /* CanvasViewController.m */; };
+		7F17DDE21B5E37860023940A /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F17DDE01B5E37860023940A /* CanvasViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7F17DDE31B5E37860023940A /* CanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F17DDE11B5E37860023940A /* CanvasViewController.xib */; };
 		7F17DDE71B5E37AA0023940A /* ThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F17DDE51B5E37AA0023940A /* ThumbnailViewController.m */; };
 		7F17DDE81B5E37AA0023940A /* ThumbnailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F17DDE61B5E37AA0023940A /* ThumbnailViewController.xib */; };
@@ -62,6 +62,7 @@
 		7FE045791B61DEA6009F79F2 /* UIView+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE045781B61DEA6009F79F2 /* UIView+UIImage.m */; };
 		7FE0457E1B61DEBB009F79F2 /* ScribbleThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0457D1B61DEBB009F79F2 /* ScribbleThumbnailView.m */; };
 		7FE045811B61DEEB009F79F2 /* ScribbleThumbnailViewImageProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE045801B61DEEB009F79F2 /* ScribbleThumbnailViewImageProxy.m */; };
+		7FE045881B622D78009F79F2 /* ScribbleThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE045871B622D78009F79F2 /* ScribbleThumbnailCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,8 @@
 		7FE0457D1B61DEBB009F79F2 /* ScribbleThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleThumbnailView.m; sourceTree = "<group>"; };
 		7FE0457F1B61DEEB009F79F2 /* ScribbleThumbnailViewImageProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleThumbnailViewImageProxy.h; sourceTree = "<group>"; };
 		7FE045801B61DEEB009F79F2 /* ScribbleThumbnailViewImageProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleThumbnailViewImageProxy.m; sourceTree = "<group>"; };
+		7FE045861B622D78009F79F2 /* ScribbleThumbnailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleThumbnailCell.h; sourceTree = "<group>"; };
+		7FE045871B622D78009F79F2 /* ScribbleThumbnailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleThumbnailCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +343,7 @@
 		7F17DDB91B5E32010023940A /* ThumbnailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7FE045851B622D5D009F79F2 /* Scribble ThumbnailCell */,
 				7F17DDE41B5E37AA0023940A /* ThumbnailViewController.h */,
 				7F17DDE51B5E37AA0023940A /* ThumbnailViewController.m */,
 				7F17DDE61B5E37AA0023940A /* ThumbnailViewController.xib */,
@@ -535,6 +539,15 @@
 			path = Proxy;
 			sourceTree = "<group>";
 		};
+		7FE045851B622D5D009F79F2 /* Scribble ThumbnailCell */ = {
+			isa = PBXGroup;
+			children = (
+				7FE045861B622D78009F79F2 /* ScribbleThumbnailCell.h */,
+				7FE045871B622D78009F79F2 /* ScribbleThumbnailCell.m */,
+			);
+			path = "Scribble ThumbnailCell";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -682,6 +695,7 @@
 				7F3ECE521B6080FE00D1E4A6 /* Scribble.m in Sources */,
 				7F3ECE641B6102CE00D1E4A6 /* SetStrokeColorCommand.m in Sources */,
 				7F5E20AF1B5FBF1B0087B8BC /* CanvasView.m in Sources */,
+				7FE045881B622D78009F79F2 /* ScribbleThumbnailCell.m in Sources */,
 				7F5E20BB1B5FCAC10087B8BC /* Commond.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,7 +774,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -797,7 +811,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -810,6 +824,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TouchPainter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -822,6 +837,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TouchPainter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

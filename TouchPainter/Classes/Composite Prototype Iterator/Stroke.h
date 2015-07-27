@@ -21,7 +21,7 @@
     
 }
 
-@property (nonatomic, strong)UIColor *color;
+@property (nonatomic, retain)UIColor *color;
 @property (nonatomic, assign)CGFloat size;
 @property (nonatomic, assign)CGPoint loction;
 @property (nonatomic, readonly) NSUInteger count;

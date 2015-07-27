@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Mark.h"
 #import "ScribbleMemento.h"
+#import "ScribbleMemento+Friend.h"
 @interface ScribbleMemento ()
 - (id) initWithMark:(id<Mark>)aMark;
 
-@property (nonatomic, copy)id<Mark>mark;
+@property (nonatomic, strong)id<Mark>mark;
 @property (nonatomic, assign) BOOL hasComleteSnapshot;
 
 

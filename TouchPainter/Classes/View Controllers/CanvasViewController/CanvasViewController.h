@@ -29,6 +29,7 @@
 @property (nonatomic,retain) UIColor *strokeColor;
 @property (nonatomic,assign) CGFloat strokeSize;
 
+
 - (void) loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator;
 
 - (IBAction)onBarButtonHit:(id)sender;

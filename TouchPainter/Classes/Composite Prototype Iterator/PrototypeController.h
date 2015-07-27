@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface PrototypeController : UIViewController
+{
 
+}
 @end

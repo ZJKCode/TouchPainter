@@ -84,17 +84,21 @@
 
 - (id) initWithMemento:(ScribbleMemento *)aMemento
 {
-    if (self = [super init])
-    { if([aMemento hasComleteSnapshot]){
-        [self setMark:[aMemento mark]];
-    } else {
+    if (self = [super init]){
+        if([aMemento hasComleteSnapshot]){
+        
+            [self setMark:[aMemento mark]];
+    
+        }else {
         // if the memento contains only
         // incremental mark, then we need to
         // create a parent Stroke object to
         // hold it
 
-        parentMark_ = [[Stroke alloc] init];
-        [self attachStateFromMemento:aMemento];
+        
+            parentMark_ = [[Stroke alloc] init];
+        
+            [self attachStateFromMemento:aMemento];
     }
     }
     return self;
@@ -110,6 +114,7 @@
 
 - (ScribbleMemento *)scribbleMementoWithCompleteSnapshot:(BOOL)hasCompleteSnapshot
 {
+    //
     id<Mark> mementoMark = incrementalMark_;
     //if the resulting memento asks
     //for a complete snapshot ,then

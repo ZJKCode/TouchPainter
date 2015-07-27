@@ -24,14 +24,17 @@
 // hook up everything with a new Scribble instance
 - (void)setScribble:(Scribble *)aScribble
 {
+    
     if (scribble_ != aScribble) {
-        scribble_ = aScribble;
+      
+        scribble_ = [aScribble retain];
         
         [scribble_ addObserver:self
                     forKeyPath:@"mark"
-                       options:NSKeyValueObservingOptionInitial|
-                                NSKeyValueObservingOptionNew
+                       options:NSKeyValueObservingOptionInitial |
+                                    NSKeyValueObservingOptionNew
                        context:nil];
+        
     }
 
 }
@@ -41,11 +44,11 @@
     //get a default canvas view
     // with the factory method of
     // the CanvasViewGenerator
-    CanvasViewGenerator  *defaultGenerator = [[CanvasViewGenerator alloc] init];
+    CanvasViewGenerator  *defaultGenerator = [[[CanvasViewGenerator alloc] init] autorelease];
     [self loadCanvasViewWithGenerator:defaultGenerator];
     
     //init a scribble model
-    Scribble *scribble = [[Scribble alloc] init];
+    Scribble *scribble = [[[Scribble alloc] init] autorelease];
     [self setScribble:scribble];
     
     //setup default stroke color and size
@@ -63,7 +66,12 @@
                                          alpha:1.0]];
 
 }
-
+- (void)dealloc
+{
+    [canvasView_ release];
+    [scribble_ release];
+    [super dealloc];
+}
 #pragma mark - 
 #pragma mark Loading a CanvasView from a CanvasViewGenerator
 - (void) loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator
@@ -112,6 +120,7 @@
 - (void) executeInvocation:(NSInvocation *)invocation withUndoInvocation:(NSInvocation *)undoInvocation
 {
     [invocation retainArguments];
+    
     [[self.undoManager prepareWithInvocationTarget:self]
      unexecuteInvocation:undoInvocation
      withRedoInvocation:invocation];
@@ -167,11 +176,11 @@
     //if this indeed a drag from
     // a finger
     if (CGPointEqualToPoint(lastPoit, startPont_)) {
-        id<Mark>newStroke = [[Stroke alloc] init];
+        id<Mark>newStroke = [[[Stroke alloc] init] autorelease];
         [newStroke setColor:strokeColor_];
         [newStroke setSize:strokeSize_];
         
-        //[scribble_ addMark:newStroke shouldAddToPreviousMark:NO];
+       // [scribble_ addMark:newStroke shouldAddToPreviousMark:NO];
         
         // retrieve a new NSInvocation for drawing and
         // set new arguments for the draw command
@@ -190,7 +199,7 @@
     // add the current touch as another vertex to the
     // temp stroke
     CGPoint thisPoint = [[touches anyObject] locationInView:canvasView_];
-    Vertex *vertex = [[Vertex alloc] initWithLoction:thisPoint];
+    Vertex *vertex = [[[Vertex alloc] initWithLoction:thisPoint] autorelease];
  
     // we don't need to undo every vertex
     // so we are keeping this
@@ -200,12 +209,13 @@
 - (void )touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     CGPoint lastPoint = [[touches anyObject] previousLocationInView:canvasView_];
+    
     CGPoint thisPoint = [[touches anyObject] locationInView:canvasView_];
     // if the touch never moves (stays at the same spot until lifted now)
     // just add a dot to an existing stroke composite
     // otherwise add it to the temp stroke as the last vertex
     if (CGPointEqualToPoint(lastPoint, thisPoint)) {
-        Dot *singleDot = [[Dot alloc] initWithLoction:thisPoint];
+        Dot *singleDot = [[[Dot alloc] initWithLoction:thisPoint] autorelease];
         [singleDot setColor:strokeColor_];
         [singleDot setSize:strokeSize_];
         

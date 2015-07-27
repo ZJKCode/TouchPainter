@@ -29,7 +29,7 @@
         scribble_ = [Scribble scribbleWithMemento:scribbleMemento];
         
     }
-    return scribble_;
+    return scribble_ ;
     
 }
 // Clients can use this method directly
