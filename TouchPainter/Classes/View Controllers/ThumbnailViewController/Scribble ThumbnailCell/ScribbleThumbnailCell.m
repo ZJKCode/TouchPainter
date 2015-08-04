@@ -34,10 +34,10 @@
     }
     
     if (index< [ScribbleThumbnailCell numberOfPlaceHoders]) {
-        CGFloat x = index *90 + (index+1)*12;
+        CGFloat x = index *100 + (index+1)*19;
         CGFloat y = 10;
-        CGFloat width = 90;
-        CGFloat height = 130;
+        CGFloat width = 100;
+        CGFloat height = 140;
         [thumbnailView setFrame:CGRectMake(x,y , width, height)];
         [self.contentView addSubview:thumbnailView];
         

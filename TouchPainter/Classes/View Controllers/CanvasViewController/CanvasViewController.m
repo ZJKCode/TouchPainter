@@ -6,6 +6,10 @@
 //  Copyright (c) 2015年 zhang_jk. All rights reserved.
 //
 
+
+#define kWIDTH [UIScreen mainScreen].bounds.size.width
+#define kHEIGHT [UIScreen mainScreen].bounds.size.height
+
 #import "CanvasViewController.h"
 #import "Dot.h"
 #import "Stroke.h"
@@ -77,7 +81,7 @@
 - (void) loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator
 {
     [canvasView_ removeFromSuperview];
-    CGRect aFrame  = CGRectMake(0, 0, 320, self.view.frame.size.height-44);
+    CGRect aFrame  = CGRectMake(0, 0,kWIDTH, kHEIGHT-44);
     CanvasView *aCanvasView = [generator canvasViewWithFrame:aFrame];
     [self setCanvasView:aCanvasView];
     NSInteger viewIndex = [[[self view] subviews] count]-1;

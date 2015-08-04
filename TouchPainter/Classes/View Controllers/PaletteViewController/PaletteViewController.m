@@ -32,7 +32,6 @@
     SetStrokeSizeCommand *sizeCommand = (SetStrokeSizeCommand *)[sizeSlider_ command];
     sizeCommand.delegate = self;
     
-    
     //使用块语言实现
     [colorCommand setRGBValuesProvider:^(CGFloat *red,CGFloat *green,CGFloat *blue){
         *red = [redSlider_ value];

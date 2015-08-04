@@ -26,6 +26,7 @@
      else
         UIGraphicsBeginImageContext(imageSize);
     
+    //获取当前UIView的当前视图的上下文
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
