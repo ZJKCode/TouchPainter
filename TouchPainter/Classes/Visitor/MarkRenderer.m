@@ -37,7 +37,6 @@
     
     CGContextSetFillColorWithColor(context_, [[dot color] CGColor]);
     CGContextFillEllipseInRect(context_, frame);
-    
 
 }
 - (void) visitVertex:(Vertex *)vertex{
@@ -48,7 +47,6 @@
         shouldMoveContextToDot_ = NO;
     }else {
         CGContextAddLineToPoint(context_, x, y);
-        
     }
 }
 - (void) visitStroke:(Stroke *)stroke{
@@ -59,4 +57,5 @@
     shouldMoveContextToDot_ = YES;
     
 }
+
 @end

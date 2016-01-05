@@ -34,7 +34,7 @@
     }
     
     if (index< [ScribbleThumbnailCell numberOfPlaceHoders]) {
-        CGFloat x = index *100 + (index+1)*19;
+        CGFloat x = index *100 + (index+1)*5;
         CGFloat y = 10;
         CGFloat width = 100;
         CGFloat height = 140;

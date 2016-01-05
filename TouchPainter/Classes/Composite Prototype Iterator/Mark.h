@@ -4,14 +4,14 @@
 //  定义协议，作为父类
 //  Created by zhangjikuan on 15/7/23.
 //  Copyright (c) 2015年 zhang_jk. All rights reserved.
-//
+//  协议不能定义属性 @property 是声明get和set两个方法
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "MarkVisitor.h"
 
 @protocol Mark <NSObject,NSCopying,NSCoding>
-
 
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic, assign) CGFloat size;

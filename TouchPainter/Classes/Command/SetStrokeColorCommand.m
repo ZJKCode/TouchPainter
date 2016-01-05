@@ -20,7 +20,8 @@
     CGFloat greenValue = 0.0;
     CGFloat blueValue = 0.0;
     
-        [delegate_ command:self didRequestColorComponentsForRed:&redVelue
+    
+    [delegate_ command:self didRequestColorComponentsForRed:&redVelue
                  green:&greenValue
                   blue:&blueValue];
     
@@ -29,7 +30,6 @@
     if (RGBValuesProvider_ != nil) {
         RGBValuesProvider_ (&redVelue,&greenValue,&blueValue);
     }
-    
     
     UIColor *color = [UIColor colorWithRed:redVelue
                                      green:greenValue

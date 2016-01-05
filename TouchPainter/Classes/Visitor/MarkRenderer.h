@@ -24,7 +24,6 @@
 - (void) visitMark:(id<Mark>)mark;
 - (void) visitDot:(Dot *)dot;
 - (void) visitVertex:(Vertex *)vertex;
-- (void) visitStroke:(Stroke *)stroke;
-
+//- (void) visitStroke:(Stroke *)stroke;
 
 @end

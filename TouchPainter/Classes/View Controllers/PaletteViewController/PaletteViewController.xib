@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaletteViewController">
@@ -17,74 +17,108 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stroke Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOu-sa-5Sd">
-                    <rect key="frame" x="0.0" y="69" width="375" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stroke Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOu-sa-5Sd">
+                    <rect key="frame" x="0.0" y="69" width="600" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="oCy-eS-Uq7"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JQ-yh-YDB">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JQ-yh-YDB">
                     <rect key="frame" x="24" y="125" width="12" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="Ul6-hU-e4d"/>
+                        <constraint firstAttribute="height" constant="21" id="XiU-La-lVo"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Mp-Kj-hnD" customClass="CommandSlider">
-                    <rect key="frame" x="54" y="195" width="266" height="31"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Mp-Kj-hnD" customClass="CommandSlider">
+                    <rect key="frame" x="54" y="195" width="504" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="8Xm-k0-jQy"/>
+                    </constraints>
                     <connections>
                         <action selector="commandSliderValueChanged:" destination="-1" eventType="valueChanged" id="5y6-vK-lhe"/>
                         <outlet property="command" destination="MOP-aD-fFD" id="Yg0-Tf-z6V"/>
                     </connections>
                 </slider>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="G" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etT-c7-hO4">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etT-c7-hO4">
                     <rect key="frame" x="24" y="161" width="13" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Tw8-W2-8sD"/>
+                        <constraint firstAttribute="width" constant="13" id="ZkZ-15-TB8"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kZ6-MU-syQ" customClass="CommandSlider">
-                    <rect key="frame" x="54" y="157" width="266" height="31"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kZ6-MU-syQ" customClass="CommandSlider">
+                    <rect key="frame" x="54" y="157" width="504" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="MxE-Ut-Af7"/>
+                    </constraints>
                     <connections>
                         <action selector="commandSliderValueChanged:" destination="-1" eventType="valueChanged" id="y8O-Hl-uPw"/>
                         <outlet property="command" destination="MOP-aD-fFD" id="R8A-K3-tpf"/>
                     </connections>
                 </slider>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6at-Jn-b6N">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6at-Jn-b6N">
                     <rect key="frame" x="24" y="199" width="12" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Efg-m3-YPi"/>
+                        <constraint firstAttribute="width" constant="12" id="bxN-X0-THS"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQH-r9-hha">
-                    <rect key="frame" x="50" y="253" width="275" height="105"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQH-r9-hha">
+                    <rect key="frame" x="44" y="253" width="512" height="105"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="dc3-kY-ccv"/>
+                    </constraints>
                 </view>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7bt-Al-xEe" customClass="CommandSlider">
-                    <rect key="frame" x="54" y="121" width="266" height="31"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7bt-Al-xEe" customClass="CommandSlider">
+                    <rect key="frame" x="54" y="121" width="504" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XDg-Yi-8xw"/>
+                    </constraints>
                     <connections>
                         <action selector="commandSliderValueChanged:" destination="-1" eventType="valueChanged" id="zsH-eG-Atb"/>
                         <outlet property="command" destination="MOP-aD-fFD" id="Wcy-jq-t2F"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stroke Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-RK-XUH">
-                    <rect key="frame" x="0.0" y="434" width="375" height="21"/>
+                    <rect key="frame" x="0.0" y="0.0" width="92" height="20.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-fp-hPd" customClass="CommandSlider">
-                    <rect key="frame" x="54" y="483" width="266" height="31"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-fp-hPd" customClass="CommandSlider">
+                    <rect key="frame" x="76" y="423" width="448" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="oJd-wJ-66m"/>
+                    </constraints>
                     <connections>
                         <action selector="commandSliderValueChanged:" destination="-1" eventType="valueChanged" id="9hu-Ds-6Az"/>
                         <outlet property="command" destination="tae-tw-AR4" id="amH-hr-L8F"/>
                     </connections>
                 </slider>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="small_dot.png" translatesAutoresizingMaskIntoConstraints="NO" id="SU1-Zr-ZOy">
-                    <rect key="frame" x="317" y="486" width="29" height="27"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_dot.png" translatesAutoresizingMaskIntoConstraints="NO" id="SU1-Zr-ZOy">
+                    <rect key="frame" x="530" y="403" width="62" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="w5B-i1-vHm"/>
+                        <constraint firstAttribute="height" constant="58" id="xhD-TF-vKP"/>
+                    </constraints>
                 </imageView>
                 <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="PTC-37-b62">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                     <items>
                         <navigationItem id="1eG-NX-Rkw">
                             <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="bMS-Bp-d3j">
@@ -95,19 +129,50 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="small_dot.png" translatesAutoresizingMaskIntoConstraints="NO" id="2uV-f4-SEp">
-                    <rect key="frame" x="35" y="491" width="18" height="17"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_dot.png" translatesAutoresizingMaskIntoConstraints="NO" id="2uV-f4-SEp">
+                    <rect key="frame" x="8" y="409" width="62" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="254-bn-SW4"/>
+                        <constraint firstAttribute="height" constant="58" id="PM6-tM-skb"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="bQH-r9-hha" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="30r-qg-m0c"/>
+                <constraint firstAttribute="trailing" secondItem="SU1-Zr-ZOy" secondAttribute="trailing" constant="8" id="5nu-EH-3Y6"/>
+                <constraint firstAttribute="bottom" secondItem="X1b-fp-hPd" secondAttribute="bottom" constant="147" id="6lS-Z3-ziw"/>
+                <constraint firstItem="kZ6-MU-syQ" firstAttribute="top" secondItem="7bt-Al-xEe" secondAttribute="bottom" constant="6" id="8Re-YO-Kyk"/>
+                <constraint firstItem="9Mp-Kj-hnD" firstAttribute="top" secondItem="kZ6-MU-syQ" secondAttribute="bottom" constant="8" id="ABI-rQ-xk6"/>
+                <constraint firstItem="6at-Jn-b6N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="B7y-D9-raQ"/>
                 <constraint firstItem="PTC-37-b62" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CYt-R2-6xF"/>
+                <constraint firstItem="bQH-r9-hha" firstAttribute="top" secondItem="9Mp-Kj-hnD" secondAttribute="bottom" constant="28" id="GBF-ep-5xo"/>
+                <constraint firstAttribute="trailing" secondItem="bQH-r9-hha" secondAttribute="trailing" constant="44" id="Lfl-sj-LZ3"/>
+                <constraint firstItem="7bt-Al-xEe" firstAttribute="leading" secondItem="0JQ-yh-YDB" secondAttribute="trailing" constant="20" id="ORV-cg-ea6"/>
+                <constraint firstAttribute="bottom" secondItem="SU1-Zr-ZOy" secondAttribute="bottom" constant="139" id="POe-Iv-ue5"/>
+                <constraint firstItem="EOu-sa-5Sd" firstAttribute="top" secondItem="PTC-37-b62" secondAttribute="bottom" constant="25" id="QAM-jc-aHC"/>
                 <constraint firstItem="PTC-37-b62" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QC4-NI-IH0"/>
+                <constraint firstItem="etT-c7-hO4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="VZi-J5-v2e"/>
+                <constraint firstAttribute="bottom" secondItem="2uV-f4-SEp" secondAttribute="bottom" constant="133" id="Zbx-nj-Nza"/>
+                <constraint firstAttribute="trailing" secondItem="7bt-Al-xEe" secondAttribute="trailing" constant="44" id="b6S-h9-1KH"/>
+                <constraint firstItem="9Mp-Kj-hnD" firstAttribute="leading" secondItem="6at-Jn-b6N" secondAttribute="trailing" constant="20" id="bVZ-iZ-rB5"/>
+                <constraint firstItem="X1b-fp-hPd" firstAttribute="leading" secondItem="2uV-f4-SEp" secondAttribute="trailing" constant="8" id="bfy-8S-X5S"/>
+                <constraint firstItem="etT-c7-hO4" firstAttribute="top" secondItem="0JQ-yh-YDB" secondAttribute="bottom" constant="15" id="bmU-iy-RjS"/>
+                <constraint firstAttribute="trailing" secondItem="9Mp-Kj-hnD" secondAttribute="trailing" constant="44" id="c4i-yW-23f"/>
+                <constraint firstAttribute="trailing" secondItem="EOu-sa-5Sd" secondAttribute="trailing" id="cGn-3d-MT9"/>
+                <constraint firstItem="SU1-Zr-ZOy" firstAttribute="leading" secondItem="X1b-fp-hPd" secondAttribute="trailing" constant="8" id="chv-2A-cHa"/>
+                <constraint firstItem="6at-Jn-b6N" firstAttribute="top" secondItem="etT-c7-hO4" secondAttribute="bottom" constant="17" id="deb-aj-FZX"/>
+                <constraint firstItem="0JQ-yh-YDB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="hvx-wZ-cAJ"/>
+                <constraint firstItem="2uV-f4-SEp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="iLA-gD-DUM"/>
+                <constraint firstAttribute="trailing" secondItem="kZ6-MU-syQ" secondAttribute="trailing" constant="44" id="p3d-r2-ztC"/>
+                <constraint firstItem="7bt-Al-xEe" firstAttribute="top" secondItem="EOu-sa-5Sd" secondAttribute="bottom" constant="31" id="tzG-BJ-bcg"/>
+                <constraint firstItem="0JQ-yh-YDB" firstAttribute="top" secondItem="EOu-sa-5Sd" secondAttribute="bottom" constant="35" id="vEo-bF-qgO"/>
                 <constraint firstAttribute="trailing" secondItem="PTC-37-b62" secondAttribute="trailing" id="wOR-ig-Ac1"/>
+                <constraint firstItem="kZ6-MU-syQ" firstAttribute="leading" secondItem="etT-c7-hO4" secondAttribute="trailing" constant="19" id="x2t-hC-Qu7"/>
+                <constraint firstItem="EOu-sa-5Sd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yOs-mO-wIk"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="218.5" y="176.5"/>
+            <point key="canvasLocation" x="218" y="176"/>
         </view>
         <customObject id="gUc-VQ-bQC" customClass="CoordinatingController"/>
         <customObject id="MOP-aD-fFD" customClass="SetStrokeColorCommand"/>

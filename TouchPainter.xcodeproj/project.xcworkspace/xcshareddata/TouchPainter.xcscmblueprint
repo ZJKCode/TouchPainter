@@ -1,0 +1,24 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "5163eceb-d708-3f4f-9f63-e0f977655b13++4343" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5163eceb-d708-3f4f-9f63-e0f977655b13++4343" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7128C4FD-476E-4F70-A865-93649F3BBDBA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5163eceb-d708-3f4f-9f63-e0f977655b13++4343" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TouchPainter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TouchPainter.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/203.86.78.113:8443\/svn\/ibranch",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5163eceb-d708-3f4f-9f63-e0f977655b13++4343"
+    }
+  ]
+}
