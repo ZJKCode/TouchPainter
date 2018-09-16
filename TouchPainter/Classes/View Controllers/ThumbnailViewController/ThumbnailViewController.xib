@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThumbnailViewController">
+            <connections>
+                <outlet property="navItem_" destination="dce-iK-hD1" id="ITI-cV-bmi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-BX-bTd">
+                    <rect key="frame" x="0.0" y="44" width="600" height="554"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iy0-75-K0p"/>
+                        <outlet property="delegate" destination="-1" id="ruD-b5-o2f"/>
+                    </connections>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="fdw-yO-cZu">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <items>
+                        <navigationItem id="dce-iK-hD1">
+                            <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="p4M-SS-ez9">
+                                <connections>
+                                    <action selector="requsetViewChangeByObject:" destination="v5e-uZ-jgs" id="LJV-HS-mXq"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="QmT-lb-meh"/>
+                    </connections>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="z8S-BX-bTd" secondAttribute="bottom" constant="2" id="0O7-FF-ZmG"/>
+                <constraint firstItem="z8S-BX-bTd" firstAttribute="top" secondItem="fdw-yO-cZu" secondAttribute="bottom" id="CnC-Gk-t0R"/>
+                <constraint firstItem="z8S-BX-bTd" firstAttribute="top" secondItem="fdw-yO-cZu" secondAttribute="bottom" id="FJ7-aS-nox"/>
+                <constraint firstAttribute="bottom" secondItem="z8S-BX-bTd" secondAttribute="bottom" constant="2" id="NYL-o2-Rri"/>
+                <constraint firstItem="fdw-yO-cZu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="STb-x6-idh"/>
+                <constraint firstAttribute="trailing" secondItem="fdw-yO-cZu" secondAttribute="trailing" id="Vd7-9v-pKJ"/>
+                <constraint firstItem="fdw-yO-cZu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bWH-od-kti"/>
+                <constraint firstAttribute="trailing" secondItem="z8S-BX-bTd" secondAttribute="trailing" id="i48-4i-bJJ"/>
+                <constraint firstItem="z8S-BX-bTd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jIA-gs-HNh"/>
+                <constraint firstAttribute="trailing" secondItem="z8S-BX-bTd" secondAttribute="trailing" id="jT6-NU-hco"/>
+                <constraint firstItem="z8S-BX-bTd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="v8i-zG-ERu"/>
+            </constraints>
+        </view>
+        <customObject id="v5e-uZ-jgs" customClass="CoordinatingController"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DsE-xH-anl" customClass="ScribbleThumbnailCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DsE-xH-anl" id="Hu8-s8-eZa">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="250" y="551"/>
+        </tableViewCell>
+    </objects>
+</document>
